@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merged Code</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var subject = "New Message from Contact Form";
+            var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+
+            var mailtoLink = "mailto:codetalive@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Coding Projects Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to our store!</h2>
+        <p>We sell a variety of coding projects for developers of all levels. Browse our selection below and find your next project!</p>
+
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <input type="button" value="Submit" onclick="sendEmail()">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Coding Projects Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
